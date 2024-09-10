@@ -1,0 +1,53 @@
+import,React,{component} from 'react'; import{
+StyleSheet,
+Text,
+View,
+TextInput,
+TouchableOpacity
+} from 'react-native';
+export default class logo extends Component <{}> {
+render(){
+return( 
+   <View style = {style.container}>
+   <Textinput style = {sttyle.inputBox}
+   underlineColorAndroid = 'rgba(0,0,0,0)'
+   placeholder = "Email"
+   placeholderTextColor = "#ffffff"
+   selectioncolor = "#fff"
+   keyboardType = "email-addres"
+   onSubmitEditing = {()=> this.password.focus()}
+   />
+
+   <TextInput style = {style.inputbox}
+   underlineColorAndroid = 'rgba(0,0,0,0)'
+   placeholder = "password"
+   secureTextEntry = {true}
+   placeholderTextColor = "#ffffff"
+   ref={(input) => this.password = input}
+   />
+
+   <TouchableOpacity atyle = {style.button}>
+   <Text style = {style.buttonText}> {this.props.type}</Text>
+   </TouchableOpacity>
+
+   </view>
+   )
+   }
+   }
+   const style = StyleSheet.create({
+
+     container : {
+      flexgrow : 1, justifyContent : 'center' ,alignItem : 'center'
+      },
+      
+    inputBox : {
+
+      width : 300,backgroundColor : 'rgba(255,255,0,2)', borderRadius : 25, paddingHorizontal : 16, fontSize : 16, color : '#fffff , marginVertical : 10
+      },
+     button : {
+        width : 300, backgroundColor : '#1c313a', borderRadius : 25, marginVertical : 10, paddingVertical : 13
+        },
+        buttonText : { 
+        fontSize : 16, fontWeight : '500', color : '#ffffff', textAlign : 'center'
+        }
+        });
